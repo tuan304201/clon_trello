@@ -1,0 +1,11 @@
+@import './setting.scss';
+
+$body-bg-color: #0079bf;
+
+.navbar__board {
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    background-color: $body-bg-color;
+    font-size: 1.1rem;
+}

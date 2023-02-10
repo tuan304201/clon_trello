@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import './setting.scss';
 
 body {
     margin: 0;
@@ -18,113 +18,10 @@ ul li {
 }
 
 /* Khai báo biến */
-$body-bg-color: #0079bf;
-$app-bg-color: #0067a3;
-$card-bg-color: #ebecf0;
-$border-radius: 6px;
-$card-border-radius: 4px;
 
 .app__container {
     background-color: $body-bg-color;
     height: 100vh;
     display: grid;
     grid-template-rows: 40px 50px 1fr;
-
-    .navbar {
-        padding-left: 10px;
-        display: flex;
-        align-items: center;
-
-        &.app {
-            background-color: $app-bg-color;
-            font-size: 1.5rem;
-        }
-
-        &.board {
-            background-color: $body-bg-color;
-            font-size: 1.1rem;
-        }
-    }
-
-    .board__columns {
-        display: flex;
-        overflow-x: auto;
-        margin: 0 10px 10px 10px;
-
-        &::-webkit-scrollbar {
-            -webkit-appearance: none;
-        }
-        &::-webkit-scrollbar:horizontal {
-            height: 12px;
-        }
-        &::-webkit-scrollbar-thumb {
-            background-color: rgba(255, 255, 255, 0.24);
-            border-radius: $border-radius;
-        }
-
-        .column {
-            flex: 0 0 auto;
-            width: 300px;
-            height: calc(100% - 10px);
-            &:not(:first-child) {
-                margin-left: 10px;
-            }
-
-            > * {
-                background-color: $card-bg-color;
-                color: #333;
-                padding: 0 8px;
-            }
-
-            header {
-                padding-left: 15px;
-                height: 46px;
-                line-height: 46px;
-                font-size: 16px;
-                font-weight: bold;
-                border-top-right-radius: $border-radius;
-                border-top-left-radius: $border-radius;
-            }
-
-            footer {
-                padding-left: 10px;
-                height: 46px;
-                line-height: 46px;
-                border-bottom-right-radius: $border-radius;
-                border-bottom-left-radius: $border-radius;
-            }
-
-            ul {
-                overflow-y: auto;
-                max-height: calc(100% - 46px - 46px);
-
-                &::-webkit-scrollbar {
-                    -webkit-appearance: none;
-                }
-                &::-webkit-scrollbar:vertical {
-                    width: 9px;
-                }
-                &::-webkit-scrollbar-thumb {
-                    background-color: darken($card-bg-color, 15);
-                    border-right: 5px solid $card-bg-color;
-                }
-
-                li {
-                    background-color: white;
-                    padding: 10px;
-                    box-shadow: rgba(0, 0, 0, 0.15) 1px 1px 2.6px;
-                    border-radius: $card-border-radius;
-                    margin-bottom: 10px;
-
-                    img {
-                        display: block;
-                        width: calc(100% + 2 * 10px);
-                        margin: -10px 0 10px -10px;
-                        border-top-right-radius: $border-radius;
-                        border-top-left-radius: $border-radius;
-                    }
-                }
-            }
-        }
-    }
 }
