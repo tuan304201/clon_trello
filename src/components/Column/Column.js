@@ -1,15 +1,17 @@
 import React from 'react';
-import Task from 'components/Task/Task';
 import './Column.scss';
+import Card from 'components/Card/Card';
+import { mapOder } from 'untilities/sort';
 
-const Column = () => {
+const Column = ({ column }) => {
+    const cards = mapOder(column.cards, column.cardOder, 'id');
     return (
         <div className="column">
-            <header>title content</header>
-            <ul className="task__list">
-                <Task />
-                <Task />
-                <Task />
+            <header>{column.title}</header>
+            <ul className="card__list">
+                {cards.map((card, index) => (
+                    <Card key={index} card={card} />
+                ))}
             </ul>
             <footer>Add another card</footer>
         </div>
