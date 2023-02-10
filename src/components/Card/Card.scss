@@ -1,13 +1,13 @@
 @import './setting.scss';
 
-.task__item {
+.card__item {
     background-color: white;
     padding: 10px;
     box-shadow: rgba(0, 0, 0, 0.15) 1px 1px 2.6px;
     border-radius: $card-border-radius;
     margin-bottom: 10px;
 
-    img {
+    .card__cover {
         display: block;
         width: calc(100% + 2 * 10px);
         margin: -10px 0 10px -10px;
